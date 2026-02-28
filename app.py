@@ -1,16 +1,17 @@
 import streamlit as st
-import cv2
-import numpy as np
 import yt_dlp
 from moviepy.editor import VideoFileClip
+import cv2
 import os
 
-st.title("⚽ AI Futbol Dünyası")
+st.title("⚽ AI Futbol Comp Yapıcı")
 
 url = st.text_input("YouTube Maç Linki:")
-oyuncu = st.text_input("Oyuncu Adı (Rafa Silva):")
+oyuncu = st.text_input("Oyuncu İsmi:")
 
 if st.button("Analizi Başlat"):
-    st.write(f"🔍 {oyuncu} analiz ediliyor... (Kütüphaneler yüklendi!)")
-    # Test için OpenCV versiyonunu yazdıralım
-    st.write(f"Sistem Hazır! OpenCV Versiyonu: {cv2.__version__}")
+    if url:
+        st.write(f"🔍 {oyuncu} için sistem hazırlanıyor...")
+        st.write("✅ Kütüphaneler başarıyla yüklendi!")
+    else:
+        st.error("Lütfen bir link girin.")
