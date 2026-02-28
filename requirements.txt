@@ -1,6 +1,5 @@
 streamlit
 yt-dlp
 moviepy
-ultralytics
 opencv-python-headless
 numpy
